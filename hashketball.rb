@@ -216,3 +216,27 @@ def big_shoe_rebounds()
 end
 
 def most_points_scored
+ temp = game_hash()
+ max_points = 0
+ result = 0
+ i = 0
+ while i<temp[:home][:players].length do
+  if temp[:home][:players][i][:points] > max_points
+    result = temp[:home][:players][i][:player_name] 
+    max_points = temp[:home][:players][i][:points]
+  end
+  i+=1
+  end
+
+ j = 0
+ while j<temp[:away][:players].length do
+  if temp[:away][:players][j][:points] > max_points
+    result = temp[:away][:players][j][:player_name] 
+    max_points = temp[:away][:players][j][:points]
+  end
+  j+=1
+  end
+  
+  return result
+
+end
