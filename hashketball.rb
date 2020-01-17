@@ -243,8 +243,10 @@ end
 
 def winning_team
    temp = game_hash()
-   home_points = temp[:home][:players].reduce {|sum, n| sum += n[:points]}
-   home_points = temp[:home][:players].reduce {|sum, n| sum += n[:points]}
+   home_sum = 0
+   away_sum = 0
+   home_points = temp[:home][:players].reduce {|home_sum, n| sum += n[:points]}
+   home_points = temp[:home][:players].reduce {|away_sum, n| sum += n[:points]}
    return temp[:home][:team_name] if home_points > away_points
    return temp[:away][:team_name]
  end
