@@ -254,7 +254,7 @@ def winning_team
  def player_with_longest_name
    temp = game_hash()
    longest_name =  ''
-   temp_name
+   temp_name =''
     temp.each { |teams| 
       teams[:players].each { |n|
       temp_name = n[:player_name] 
