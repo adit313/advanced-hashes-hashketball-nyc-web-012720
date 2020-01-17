@@ -255,7 +255,7 @@ def winning_team
    temp = game_hash()
    longest_name =  ''
     temp.each { |key, teams| 
-      teams[:players].each { |n|
+      teams[:players].each { |key1, n|
       longest_name = n[:player_name] if longest_name.length < n[:player_name].length
     }
     }
