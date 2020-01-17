@@ -269,7 +269,7 @@ def player_with_longest_name
     temp.each { |key, teams| 
       teams[:players].each { |n|
       longest_name = n[:player_name] if most_steals < n[:steals]
-      
+      most_steals = n[:steals] if most_steals < n[:steals]
     }
     }
     return longest_name == player_with_longest_name()
