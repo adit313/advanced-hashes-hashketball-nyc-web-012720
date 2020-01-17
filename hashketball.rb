@@ -259,7 +259,6 @@ def winning_team
       teams[:players].each { |n|
       temp_name = n[:player_name] 
       pp temp_name
-      longest_name= temp_name if longest_name.length < temp_name.length
     }
     }
     return longest_name
