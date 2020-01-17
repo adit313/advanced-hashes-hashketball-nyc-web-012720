@@ -253,9 +253,10 @@ def winning_team
  
  def player_with_longest_name
    temp = game_hash()
+   temp_hash
    longest_name =  ''
     temp.each { |key, teams| 
-    pp teams[:players]
+    temp_hash = teams[:players]
       teams[:players].each { |key1, n|
       longest_name = n[:player_name] if longest_name.length < n[:player_name].length
     }
